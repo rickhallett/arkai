@@ -1,5 +1,6 @@
 // src/components/ChatWindow.tsx
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import Message from './Message';
 import './ChatWindow.css';
 
 interface ChatWindowProps {
@@ -11,16 +12,20 @@ interface ChatWindowProps {
 }
 
 const ChatWindow: React.FC<ChatWindowProps> = ({ messages }: ChatWindowProps) => {
+  const chatEndRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
+
   return (
     <div className="ChatWindow">
       {messages.map((message) => (
-        <div
-          key={message.id}
-          className={`message ${message.sender === 'user' ? 'user-message' : 'assistant-message'}`}
-        >
-          <span>{message.text}</span>
-        </div>
+        <Message key={message.id} text={message.text} sender={message.sender} />
       ))}
+      <div ref={chatEndRef} />
     </div>
   );
 };
