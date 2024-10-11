@@ -1,0 +1,99 @@
+/* src/components/ChatWindow.css */
+
+.ChatContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .ChatWindow {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #3b3b3b, #1e1e1e);
+    color: #e0e0e0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 95%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  
+  .user-message {
+    background: linear-gradient(135deg, #0066ff, #33ccff);
+    color: white;
+    align-self: flex-end;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 102, 255, 0.4);
+    text-align: right;
+  }
+  
+  .assistant-message {
+    background: linear-gradient(135deg, #555555, #777777);
+    color: white;
+    align-self: flex-start;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+  
+  .InputBox {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .InputBox input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: #e0e0e0;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  .InputBox button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0066ff, #33ccff);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .InputBox button:hover {
+    background: linear-gradient(135deg, #0056b3, #1ea7fd);
+    transform: scale(1.05);
+  }

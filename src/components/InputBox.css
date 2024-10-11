@@ -1,0 +1,33 @@
+/* src/components/InputBox.css */
+
+.InputBox {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+  }
+  
+  .InputBox input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+  }
+  
+  .InputBox button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .InputBox button:hover {
+    background-color: #0056b3;
+  }
